@@ -1,0 +1,50 @@
+<html >
+<head>
+  <title>Predict the Magnitude</title>  
+</head>
+
+<body>
+ <div>
+	<h1>Predict Magnitude</h1>
+
+    <form action="{{ url_for('getprediction')}}" method="post">
+      <input type="text" name="latitude" placeholder="Input1" required="required" />
+      <input type="text" name="longitude" placeholder="Input2" required="required" />
+      <input type="text" name="depth" placeholder="Input3" required="required" />
+      <input type="text" name="magType" placeholder="Input4" required="required" />
+      <input type="text" name="nst" placeholder="Input5" required="required" />
+      <input type="text" name="gap" placeholder="Input6" required="required" />
+      <input type="text" name="dmin" placeholder="Input7" required="required" />
+      <input type="text" name="rms" placeholder="Input8" required="required" />
+      <input type="text" name="type" placeholder="Input9" required="required" />
+      <input type="text" name="depthError" placeholder="Input10" required="required" />
+      <input type="text" name="magError" placeholder="Input11" required="required" />
+      <input type="text" name="magNst" placeholder="Input12" required="required" />
+      <input type="text" name="status" placeholder="Input13" required="required" />
+      <input type="text" name="locationSource" placeholder="Input14" required="required" />
+      <input type="text" name="Month" placeholder="Input15" required="required" />
+      <input type="text" name="Day" placeholder="Input16" required="required" />
+      <!-- <input type="text" name="Hour" placeholder="Input17" required="required" /> -->
+      
+        <button type="submit" class="btn btn-primary btn-block btn-large">getMagnitude</button>
+    </form>
+    
+   <br>
+   <br>
+   {{ output }}
+
+ </div>
+
+ <div>
+    <h1>World Map Generator</h1>
+    <form action="{{ url_for('getmap')}}" method="post">
+    <form>
+        <input type="text" name="latitude" placeholder="Input1" required="required" />
+        <input type="text" name="longitude" placeholder="Input2" required="required" />
+        <button type="submit" id="buton">Generate Map</button>
+    </form>
+ </div>
+
+
+</body>
+</html>
